@@ -61,10 +61,9 @@ public class birdMovement : MonoBehaviour
     {
         for (; ; )
         {
-            
+            yield return new WaitForSeconds(0.5f);
             if (isGrounded == true)
-            {
-                yield return new WaitForSeconds(0.5f);
+            {               
                 gainStamina(1);
             }
         }
