@@ -17,7 +17,7 @@ public class birdMovement : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    public int maxStamina = 10;
+    public int maxStamina = 5;
     public int currentStamina;
 
     public Stamina staminaBar;
@@ -42,7 +42,7 @@ public class birdMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && currentStamina > 0)
         {
-            velocity.y = 5f;
+            velocity.y = 8f;
             takeStamina(1);
         }       
        
@@ -62,7 +62,7 @@ public class birdMovement : MonoBehaviour
         for (; ; )
         {
             yield return new WaitForSeconds(0.5f);
-            if (isGrounded == true)
+            if (isGrounded == true && currentStamina < maxStamina)
             {               
                 gainStamina(1);
             }
