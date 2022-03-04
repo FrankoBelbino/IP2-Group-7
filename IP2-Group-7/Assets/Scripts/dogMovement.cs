@@ -23,13 +23,14 @@ public class dogMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        Debug.Log(isGrounded);
 
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        if (isGrounded = true && Input.GetButtonDown("Jump"))
+        if (isGrounded == true && Input.GetButtonDown("Jump"))
         {
             velocity.y = 8f;            
         }
