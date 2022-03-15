@@ -40,7 +40,7 @@ public class birdMovement : MonoBehaviour
             velocity.y = -2f;            
         }        
 
-        if (Input.GetButtonDown("Jump") && currentStamina > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && currentStamina > 0)
         {
             velocity.y = 8f;
             takeStamina(1);
@@ -48,7 +48,7 @@ public class birdMovement : MonoBehaviour
        
         
        
-        float x = Input.GetAxis("Horizontal");
+        float x = Input.GetAxis("ParrotHorizontal");
 
         Vector3 move = transform.right * x;
         controller.Move(move * speed * Time.deltaTime);

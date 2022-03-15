@@ -30,14 +30,14 @@ public class dogMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        if (isGrounded == true && Input.GetButtonDown("Jump"))
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
         {
             velocity.y = 8f;            
         }
 
 
 
-        float x = Input.GetAxis("Horizontal");
+        float x = Input.GetAxis("DogHorizontal");
 
         Vector3 move = transform.right * x;
         controller.Move(move * speed * Time.deltaTime);
