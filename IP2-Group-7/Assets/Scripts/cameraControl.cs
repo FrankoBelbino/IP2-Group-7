@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
 public class cameraControl : MonoBehaviour
 {
     public List<Transform> targets;
@@ -9,12 +10,12 @@ public class cameraControl : MonoBehaviour
     public Vector3 offset;
     public float smoothTime = .5f;
 
-    public float maxZoom = 10f;
-    public float minZoom = 5f;
-    public float zoom = 2f;
+    public float maxZoom = 60f;
+    public float minZoom = 90f;
+    public float zoomLimiter = 20f;
 
     private Vector3 velocity;
-    private Camera cam;
+    public Camera cam;
 
     void start()
     {
@@ -41,8 +42,7 @@ public class cameraControl : MonoBehaviour
 
     void Zoom()
     {
-        Debug.Log(GetGreatestDistance());
-        float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoom);
+        float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimiter);
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
     }
 
