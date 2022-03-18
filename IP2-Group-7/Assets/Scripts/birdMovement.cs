@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class birdMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public GameObject parrot;    
+    public GameObject parrot;
+    
     public float speed = 10f;
 
     Vector3 velocity;
@@ -18,14 +19,16 @@ public class birdMovement : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    public int maxStamina = 5;
+    public int maxStamina;
     public int currentStamina;
 
     public Stamina staminaBar;
+    public parrotPickup parrotPickup;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         controller = GetComponent<CharacterController>();
         staminaBar.SetMaxStamina(maxStamina);
         StartCoroutine("StaminaRegen");
