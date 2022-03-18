@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class birdMovement : MonoBehaviour
 {
     public CharacterController controller;
+    public GameObject parrot;    
     public float speed = 10f;
 
     Vector3 velocity;
@@ -37,24 +38,22 @@ public class birdMovement : MonoBehaviour
 
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -2f;            
-        }        
-
+            velocity.y = -2f;
+        }     
+        
         if (Input.GetKeyDown(KeyCode.Space) && currentStamina > 0)
         {
             velocity.y = 8f;
             takeStamina(1);
-        }       
-       
-        
-       
-        float x = Input.GetAxis("ParrotHorizontal");
+        }
+
+        float x = Input.GetAxis("ParrotHorizontal");                
 
         Vector3 move = transform.right * x;
         controller.Move(move * speed * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);       
+        controller.Move(velocity * Time.deltaTime);
     }
 
     IEnumerator StaminaRegen()
@@ -63,7 +62,7 @@ public class birdMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
             if (isGrounded == true && currentStamina < maxStamina)
-            {               
+            {
                 gainStamina(1);
             }
         }

@@ -15,8 +15,8 @@ public class dogMovement : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
-    public int dashTime = 1;
-    public int dashSpeed = 20;
+    public float dashTime;
+    public float dashSpeed;
 
     private void Start()
     {
@@ -28,25 +28,24 @@ public class dogMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
 
-        //if (isGrounded && Input.GetButtonDown("RightShift"))
-        //{
-        //    StartCoroutine(Dash());
-        //}
+        if (Input.GetKey(KeyCode.RightShift))
+        {
+            StartCoroutine(Dash());
+        }
 
-        //IEnumerator Dash()
-        //{
-        //    float timeChecker = Time.time;
-        //
-        //    float x = Input.GetAxis("DogHorizontal");
+        IEnumerator Dash()
+        {
+            float timeChecker = Time.time;
+        
+            float x = Input.GetAxis("DogHorizontal");
 
-        //    while (Time.time < timeChecker + dashTime)
-        //    {
-        //        Vector3 move = transform.right * x;
-        //       controller.Move(move * dashSpeed * Time.deltaTime);
-        //        yield return null;
-        //    }
-
-        //}
+            while (Time.time < timeChecker + dashTime)
+            {
+                Vector3 move = transform.right * x;
+                controller.Move(move * dashSpeed * Time.deltaTime);                
+                yield return null;
+            }
+        }
 
         if (isGrounded && velocity.y < 0)
         {
