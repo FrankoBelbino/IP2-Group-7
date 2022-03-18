@@ -4931,7 +4931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyHeld: 0
-  door: {fileID: 2556386093812190283}
+  door: {fileID: 1764253401}
   dogKey: {fileID: 629896376}
   key: {fileID: 1903521281}
 --- !u!114 &1453825410
