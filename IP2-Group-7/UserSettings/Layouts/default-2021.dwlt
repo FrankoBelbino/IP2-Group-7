@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 17
+  controlID: 16
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 19
+  controlID: 18
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -501,9 +501,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -98.9362, y: -20.3415, z: 124.481606}
+    m_Target: {x: -62.510956, y: -26.492002, z: 138.01286}
     speed: 2
-    m_Value: {x: -98.9362, y: -20.3415, z: 124.481606}
+    m_Value: {x: -62.510956, y: -26.492002, z: 138.01286}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -550,13 +550,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.081731446, y: 0.24032676, z: -0.020258626, w: -0.96695405}
+    m_Target: {x: -0.0986242, y: 0.10191244, z: -0.010100769, w: -0.9897624}
     speed: 2
-    m_Value: {x: -0.08315713, y: 0.24176453, z: -0.02074532, w: -0.96654254}
+    m_Value: {x: -0.097161815, y: 0.1004503, z: -0.009802978, w: -0.990138}
   m_Size:
-    m_Target: 73.32703
+    m_Target: 83.508865
     speed: 2
-    m_Value: 73.32703
+    m_Value: 83.508865
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -622,22 +622,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials/Trophy
+    - Assets/Models/Textures
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials/Trophy
+  - Assets/Models/Textures
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Users\Frank\Documents\GitHub\IP2-Group-7\IP2-Group-7
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ac5c0000
-    m_LastClickedID: 23724
-    m_ExpandedIDs: 00000000225c0000825c000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 70}
+    m_SelectedIDs: bc5c0000
+    m_LastClickedID: 23740
+    m_ExpandedIDs: 00000000225c0000825c0000845c0000ba5c0000bc5c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -793,9 +793,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: bc5c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: d2e3ffff24e4ffff36e5ffff72f7ffffb6f7ffffc8f8ffff3afbffff56620000fc620000
+      m_ExpandedIDs: 3afbffff8e58000056590000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -868,10 +868,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -388.5
-    m_HBaseRangeMax: 388.5
-    m_VBaseRangeMin: -291
-    m_VBaseRangeMax: 291
+    m_HBaseRangeMin: -486
+    m_HBaseRangeMax: 486
+    m_VBaseRangeMin: -301.5
+    m_VBaseRangeMax: 301.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -888,24 +888,24 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
-      width: 777
-      height: 582
+      y: 0
+      width: 972
+      height: 603
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 388.5, y: 291}
+    m_Translation: {x: 486, y: 301.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -388.5
-      y: -291
-      width: 777
-      height: 582
+      x: -486
+      y: -301.5
+      width: 972
+      height: 603
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 777, y: 603}
+  m_LastWindowPixelSize: {x: 972, y: 603}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
