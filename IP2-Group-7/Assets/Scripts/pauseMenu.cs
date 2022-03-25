@@ -17,11 +17,12 @@ public class pauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) && pauseMenuActive == "false")
+        if (Input.GetKeyDown("p") & pauseMenuActive == "false")
         {
             Pause();
         }
-        if (Input.GetKeyDown(KeyCode.P) && pauseMenuActive == "true")
+
+        if (Input.GetKeyDown("p") & pauseMenuActive == "true")
         {
             Resume();
         }

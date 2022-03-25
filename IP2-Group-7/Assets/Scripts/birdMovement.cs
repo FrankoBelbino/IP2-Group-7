@@ -39,6 +39,10 @@ public class birdMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+        Vector3 zLock = transform.position;
+        zLock.z = 0;
+        transform.position = zLock;
+
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;

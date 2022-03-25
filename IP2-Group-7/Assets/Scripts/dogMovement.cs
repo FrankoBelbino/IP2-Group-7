@@ -26,7 +26,10 @@ public class dogMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
+
+        Vector3 zLock = transform.position;
+        zLock.z = 0;
+        transform.position = zLock;
 
         if (Input.GetKey(KeyCode.RightShift))
         {
