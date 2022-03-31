@@ -9,6 +9,7 @@ public class parrotPickup : MonoBehaviour
     public GameObject parrot;
 
     Vector3 parrotPosition;
+    public float parrotRotation;
 
     public bool keyHeld;
 
@@ -23,6 +24,22 @@ public class parrotPickup : MonoBehaviour
     void Update()
     {
         PositionTracker();
+
+        if (keyHeld == true && Input.GetKey(KeyCode.F) && parrotRotation > 0)
+        {
+            key.transform.position = parrotPosition + new Vector3(1, 0, 0);
+            parrotKey.SetActive(false);
+            key.SetActive(true);
+            keyHeld = false;
+        }
+
+        if (keyHeld == true && Input.GetKey(KeyCode.F) && parrotRotation < 0)
+        {
+            key.transform.position = parrotPosition + new Vector3(-1, 0, 0);
+            parrotKey.SetActive(false);
+            key.SetActive(true);
+            keyHeld = false;
+        }
     }
 
     void OnTriggerStay(Collider col)
@@ -34,18 +51,13 @@ public class parrotPickup : MonoBehaviour
             keyHeld = true;
         }
 
-        if (keyHeld == true && Input.GetKey(KeyCode.F))
-        {
-            key.transform.position = parrotPosition + new Vector3(1, 0, 0);
-            parrotKey.SetActive(false);
-            key.SetActive(true);            
-            keyHeld = false;            
-        }
+        
     }
 
     void PositionTracker() 
     {
         parrotPosition = parrot.transform.position;
-
+        parrotRotation = parrot.transform.rotation.y;
+        
     }
 }
