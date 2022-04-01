@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class pauseMenu : MonoBehaviour
 {
@@ -17,12 +18,12 @@ public class pauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("p") & pauseMenuActive == "false")
+        if (Input.GetKeyDown("p") && pauseMenuActive == "false")
         {
             Pause();
         }
 
-        if (Input.GetKeyDown("p") & pauseMenuActive == "true")
+        if (Input.GetKeyDown("p") && pauseMenuActive == "true")
         {
             Resume();
         }
