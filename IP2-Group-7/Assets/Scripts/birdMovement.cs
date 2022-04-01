@@ -40,8 +40,8 @@ public class birdMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         Vector3 zLock = transform.position;
-        zLock.z = 0;
-        transform.position = zLock;
+        zLock.z = 7.7f;
+       
 
         if (isGrounded && velocity.y < 0)
         {
@@ -60,7 +60,9 @@ public class birdMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
         velocity.y += gravity * Time.deltaTime;
+        velocity.z = 0;
         controller.Move(velocity * Time.deltaTime);
+        //transform.position = zLock;
     }
 
     IEnumerator StaminaRegen()
