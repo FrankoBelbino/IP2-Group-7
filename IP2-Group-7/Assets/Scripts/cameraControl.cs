@@ -10,9 +10,9 @@ public class cameraControl : MonoBehaviour
     public Vector3 offset;
     public float smoothTime = .5f;
 
-    public float maxZoom = 60f;
-    public float minZoom = 90f;
-    public float zoomLimiter = 20f;
+    public float maxZoom;
+    public float minZoom;
+    public float zoomLimiter;
 
     private Vector3 velocity;
     public Camera cam;
@@ -42,12 +42,23 @@ public class cameraControl : MonoBehaviour
 
     void Zoom()
     {
-        float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimiter);
-        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
+        float newZoom = Mathf.Lerp(maxZoom, minZoom, GetDistance() / zoomLimiter);
+        print(GetDistance());
+        offset.z = Mathf.Lerp(offset.z, newZoom, Time.deltaTime);
+    }
+
+    float GetDistance()
+    {
+        float distance;
+
+        distance = Vector3.Distance(targets[0].gameObject.transform.position, targets[1].gameObject.transform.position);
+
+        return distance;
     }
 
     float GetGreatestDistance()
     {
+        
         var bounds = new Bounds(targets[0].position, Vector3.zero);
         for (int i = 0; i < targets.Count; i++)
         {

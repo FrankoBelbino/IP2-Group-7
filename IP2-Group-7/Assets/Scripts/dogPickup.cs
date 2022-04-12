@@ -18,6 +18,7 @@ public class dogPickup : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
+        print(col.name);
         if (col.gameObject.tag == "Interactable" && Input.GetKey(KeyCode.M))
         {
             dogKey.SetActive(true);
@@ -36,6 +37,21 @@ public class dogPickup : MonoBehaviour
         {            
             dogKey.SetActive(false);
             door.SetActive(false);
+        }
+
+        if (col.gameObject.tag == "pressurePlate1")
+        {
+            col.gameObject.GetComponent<pressurePlate>().Interacting();
+           
+        }        
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "pressurePlate1")
+        {
+            col.gameObject.GetComponent<pressurePlate>().NotInteracting();
+            
         }
     }
 
