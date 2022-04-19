@@ -43,7 +43,7 @@ public class cameraControl : MonoBehaviour
     void Zoom()
     {
         float newZoom = Mathf.Lerp(maxZoom, minZoom, GetDistance() / zoomLimiter);
-        print(GetDistance());
+        
         offset.z = Mathf.Lerp(offset.z, newZoom, Time.deltaTime);
     }
 
