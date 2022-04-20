@@ -25,6 +25,9 @@ public class birdMovement : MonoBehaviour
     public Stamina staminaBar;
     public parrotPickup parrotPickup;
 
+    public AudioSource flapSource;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +55,9 @@ public class birdMovement : MonoBehaviour
         {
             velocity.y = 8f;
             takeStamina(1);
+            flapSource.Play();
         }
+
 
         float x = Input.GetAxis("ParrotHorizontal");                
 

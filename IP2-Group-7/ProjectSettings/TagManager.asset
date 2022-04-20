@@ -8,6 +8,8 @@ TagManager:
   - Interactable
   - door
   - pressurePlate1
+  - Box
+  - Dog
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,7 @@ public class cameraControl : MonoBehaviour
 
     private Vector3 velocity;
     public Camera cam;
+    public AudioSource music;
 
     void start()
     {

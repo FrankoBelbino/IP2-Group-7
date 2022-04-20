@@ -18,13 +18,17 @@ public class dogMovement : MonoBehaviour
     public float dashTime;
     public float dashSpeed;
 
+    public static bool isDashing;
+
+    public AudioSource jumpSource;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
     }
 
     void Update()
-    {
+    {        
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         Vector3 zLock = transform.position;
@@ -44,10 +48,12 @@ public class dogMovement : MonoBehaviour
 
             while (Time.time < timeChecker + dashTime)
             {
+                isDashing = true;
                 Vector3 move = transform.right * x;
                 controller.Move(move * dashSpeed * Time.deltaTime);                
                 yield return null;
             }
+            isDashing = false;
         }
 
         if (isGrounded && velocity.y < 0)
@@ -57,7 +63,8 @@ public class dogMovement : MonoBehaviour
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            velocity.y = 8f;            
+            velocity.y = 8f;
+            jumpSource.Play();
         }
 
 

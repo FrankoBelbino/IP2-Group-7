@@ -7,7 +7,12 @@ public class Timer : MonoBehaviour
 {
     public float timeValue = 0;
     public Text timerText;
-    
+
+    void Start()
+    {
+        
+    }
+
     void Update()
     {
         timeValue += Time.deltaTime;

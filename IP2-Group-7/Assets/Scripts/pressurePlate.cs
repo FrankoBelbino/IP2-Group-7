@@ -7,16 +7,7 @@ public class pressurePlate : MonoBehaviour
 
     public GameObject interactObject;
    
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
+  
 
     public void Interacting()
     {

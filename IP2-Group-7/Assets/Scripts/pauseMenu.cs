@@ -7,24 +7,24 @@ using UnityEngine.UI;
 public class pauseMenu : MonoBehaviour
 {
     public GameObject menu;
-    public string pauseMenuActive;
+    public bool pauseMenuActive;
 
     void Start()
     {
         menu.SetActive(false);
         Time.timeScale = 1f;
-        pauseMenuActive = "false";
+        pauseMenuActive = false;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Pause") && pauseMenuActive == "false")
+        if (Input.GetButtonDown("Pause") && pauseMenuActive == false)
         {
             Pause();
             print("Sam Ivory");
         }
 
-        if (Input.GetButtonDown("Pause") && pauseMenuActive == "true")
+        if (Input.GetButtonDown("Pause") && pauseMenuActive == true)
         {
             Resume();
         }
@@ -34,14 +34,14 @@ public class pauseMenu : MonoBehaviour
     {
         menu.SetActive(false);
         Time.timeScale = 1f;
-        pauseMenuActive = "false";
+        pauseMenuActive = false;
     }
 
     public void Pause()
     {
         menu.SetActive(true);
         Time.timeScale = 0f;
-        pauseMenuActive = "true";
+        pauseMenuActive = true;
         print("Michael Franktions");
     }
 }
