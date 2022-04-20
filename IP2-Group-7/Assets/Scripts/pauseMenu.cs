@@ -18,12 +18,13 @@ public class pauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.P) && pauseMenuActive == "false")
+        if (Input.GetButtonDown("Pause") && pauseMenuActive == "false")
         {
             Pause();
+            print("Sam Ivory");
         }
 
-        if (Input.GetKey(KeyCode.P) && pauseMenuActive == "true")
+        if (Input.GetButtonDown("Pause") && pauseMenuActive == "true")
         {
             Resume();
         }
@@ -41,5 +42,6 @@ public class pauseMenu : MonoBehaviour
         menu.SetActive(true);
         Time.timeScale = 0f;
         pauseMenuActive = "true";
+        print("Michael Franktions");
     }
 }
