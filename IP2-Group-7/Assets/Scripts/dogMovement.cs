@@ -63,7 +63,7 @@ public class dogMovement : MonoBehaviour
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            velocity.y = 8f;
+            velocity.y = 10f;
             jumpSource.Play();
         }
 
