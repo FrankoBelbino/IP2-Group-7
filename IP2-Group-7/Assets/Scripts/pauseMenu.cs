@@ -14,7 +14,7 @@ public class pauseMenu : MonoBehaviour
         menu.SetActive(false);
         Time.timeScale = 1f;
         pauseMenuActive = false;
-    }
+    }   
 
     void Update()
     {
@@ -23,8 +23,7 @@ public class pauseMenu : MonoBehaviour
             Pause();
             print("Sam Ivory");
         }
-
-        if (Input.GetButtonDown("Pause") && pauseMenuActive == true)
+        else if (Input.GetButtonDown("Pause") && pauseMenuActive == true)
         {
             Resume();
         }

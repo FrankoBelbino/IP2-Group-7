@@ -61,11 +61,11 @@ public class dogPickup : MonoBehaviour
 
     private void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "pressurePlate1")
-        {
-            col.gameObject.GetComponent<pressurePlate>().NotInteracting();
+        //if (col.gameObject.tag == "pressurePlate1")
+        //{
+        //    col.gameObject.GetComponent<pressurePlate>().NotInteracting();
             
-        }
+        //}
     }
 
     void Update()
