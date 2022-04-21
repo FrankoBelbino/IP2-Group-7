@@ -23,7 +23,7 @@ public class pushBox : MonoBehaviour
         Debug.Log(col.gameObject.name);
         if (col.gameObject == Dog && isDashing == true)
         {
-            gameObject.transform.position = new Vector3(-11.08f, 1.54f, -0.355f);
+            gameObject.transform.position += new Vector3(6, 0, 0);
         }
     }
 }
