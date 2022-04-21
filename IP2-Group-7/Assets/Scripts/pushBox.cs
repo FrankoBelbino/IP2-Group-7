@@ -14,14 +14,16 @@ public class pushBox : MonoBehaviour
 
     void Update()
     {
-        isDashing = dogMovement.isDashing;        
+        isDashing = dogMovement.isDashing;
+        
     }
 
     void OnTriggerStay(Collider col)
     {
+        Debug.Log(col.gameObject.name);
         if (col.gameObject == Dog && isDashing == true)
         {
-            transform.position = transform.position + new Vector3(10, 0, 0);
+            gameObject.transform.position = new Vector3(-11.08f, 1.54f, -0.355f);
         }
     }
 }

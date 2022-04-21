@@ -23987,7 +23987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148226044825}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -10.96, y: 1.87, z: -0.35496}
+  m_LocalPosition: {x: -29.14, y: 1.54, z: -0.35496}
   m_LocalScale: {x: 3.467509, y: 3.467509, z: 3.467509}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24579,6 +24579,7 @@ GameObject:
   - component: {fileID: 1711813854683992652}
   - component: {fileID: 3469287838411449991}
   - component: {fileID: 3469287838411449992}
+  - component: {fileID: 3469287838411449993}
   m_Layer: 3
   m_Name: Box
   m_TagString: Box
@@ -26394,6 +26395,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dog: {fileID: 0}
+--- !u!65 &3469287838411449993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148226044825}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.82, y: 0.99999994, z: 0.9708944}
+  m_Center: {x: -0.007572382, y: 0.000000029802322, z: 0.014552786}
 --- !u!33 &3469287838429341072
 MeshFilter:
   m_ObjectHideFlags: 0
