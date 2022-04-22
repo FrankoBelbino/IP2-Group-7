@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class TrophyCollect : MonoBehaviour
 {
-    public int score;
+    public static int score;
 
     public GameObject Dog;
     public GameObject Parrot;
 
     private void OnTriggerStay(Collider col)
     {
-        if (col.gameObject == Dog || col.gameObject == Parrot)
+        if (col.gameObject == Dog)
         {
             gameObject.SetActive(false);
             score += 1;
-        }       
+        }
+
+        if (col.gameObject == Parrot)
+        {
+            gameObject.SetActive(false);
+            score += 1;
+        }
+
+
     }
 }

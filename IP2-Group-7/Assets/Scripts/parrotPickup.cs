@@ -17,8 +17,7 @@ public class parrotPickup : MonoBehaviour
     {
         parrotKey.SetActive(false);
         key.SetActive(true);
-        keyHeld = false;
-        
+        keyHeld = false;        
     }
 
     void Update()

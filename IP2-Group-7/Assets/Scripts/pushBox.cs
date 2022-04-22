@@ -14,8 +14,7 @@ public class pushBox : MonoBehaviour
 
     void Update()
     {
-        isDashing = dogMovement.isDashing;
-        
+        isDashing = dogMovement.isDashing;        
     }
 
     void OnTriggerStay(Collider col)
